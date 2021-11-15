@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/id_home_fragment"
+        android:icon="@drawable/ic_home"
+        android:checked="true"
+        android:checkable="true"
+        android:title="Home">
+    </item>
+
+    <item
+        android:id="@+id/id_quiz_start_fragment"
+        android:icon="@drawable/ic_guiz_time"
+        android:checkable="true"
+        android:title="Quiz time">
+    </item>
+
+    <item
+        android:id="@+id/id_profil_fragment"
+        android:icon="@drawable/ic_profil"
+        android:checkable="true"
+        android:title="Profil">
+    </item>
+
+    <item
+        android:id="@+id/id_question_list_fragment"
+        android:icon="@drawable/ic_list_of_questions"
+        android:checkable="true"
+        android:title="List of the questions">
+    </item>
+
+    <item
+        android:id="@+id/id_question_add_fragment"
+        android:icon="@drawable/ic_new_question"
+        android:checkable="true"
+        android:title="New question">
+    </item>
+
+</menu>

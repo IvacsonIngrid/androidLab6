@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/id_home_fragment">
+
+    <fragment
+        android:id="@+id/id_home_fragment"
+        android:name="com.example.androidnavigationexample.fragments.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_id_home_fragment_to_id_quiz_start_fragment"
+            app:destination="@id/id_quiz_start_fragment" />
+
+        <action
+            android:id="@+id/action_id_home_fragment_to_id_question_list_fragment"
+            app:destination="@id/id_question_list_fragment" />
+
+        <action
+            android:id="@+id/action_id_home_fragment_to_id_question_add_fragment"
+            app:destination="@id/id_question_add_fragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/id_quiz_start_fragment"
+        android:name="com.example.androidnavigationexample.fragments.QuizStartFragment"
+        android:label="Quiz time"
+        tools:layout="@layout/fragment_quiz_start" >
+
+        <action
+            android:id="@+id/action_id_quiz_fragment_to_questionFragment"
+            app:destination="@id/questionFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/questionFragment"
+        android:name="com.example.androidnavigationexample.fragments.QuestionFragment"
+        android:label="fragment_question"
+        tools:layout="@layout/fragment_question" >
+
+        <action
+            android:id="@+id/action_questionFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.androidnavigationexample.fragments.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" >
+        <action
+            android:id="@+id/action_resultFragment_to_id_quiz_start_fragment"
+            app:destination="@id/id_quiz_start_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/id_profil_fragment"
+        android:name="com.example.androidnavigationexample.fragments.ProfilFragment"
+        android:label="Profil"
+        tools:layout="@layout/fragment_profil" />
+    <fragment
+        android:id="@+id/id_question_list_fragment"
+        android:name="com.example.androidnavigationexample.fragments.QuestionListFragment"
+        android:label="Question list"
+        tools:layout="@layout/fragment_question_list" />
+    <fragment
+        android:id="@+id/id_question_add_fragment"
+        android:name="com.example.androidnavigationexample.fragments.QuestionAddFragment"
+        android:label="Question Add"
+        tools:layout="@layout/fragment_question_add" />
+</navigation>
