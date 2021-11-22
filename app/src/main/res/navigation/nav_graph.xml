@@ -67,10 +67,29 @@
         android:id="@+id/id_question_list_fragment"
         android:name="com.example.androidnavigationexample.fragments.QuestionListFragment"
         android:label="Question list"
-        tools:layout="@layout/fragment_question_list" />
+        tools:layout="@layout/fragment_question_list">
+
+        <action
+            android:id="@+id/action_question_list_fragment_to_question_detail"
+            app:destination="@+id/id_question_detail"/>
+    </fragment>
+
     <fragment
         android:id="@+id/id_question_add_fragment"
         android:name="com.example.androidnavigationexample.fragments.QuestionAddFragment"
         android:label="Question Add"
-        tools:layout="@layout/fragment_question_add" />
+        tools:layout="@layout/fragment_question_add">
+
+        <action
+            android:id="@+id/action_id_question_add_fragment_to_id_question_list_fragment"
+            app:destination="@+id/id_question_list_fragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/id_question_detail"
+        android:name="com.example.androidnavigationexample.fragments.QuestionDetailFragment"
+        android:label="Detail"
+        tools:layout="@layout/fragment_question_detail" />
+
+
 </navigation>
